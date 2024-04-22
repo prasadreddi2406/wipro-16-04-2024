@@ -1,0 +1,46 @@
+package task10;
+
+abstract class Shape {
+	public abstract double area();
+}
+
+package task10;
+
+class Circle extends Shape{
+	private double radius;
+	public Circle(double radius) {
+		this.radius=radius;
+	}
+	@Override
+	public double area() {
+		return 3.14*radius*radius;
+	}
+}
+
+package task10;
+
+class Rectangle extends Shape{
+	private double height;
+	private double width;
+	public Rectangle(double height, double width) {
+		this.height=height;
+		this.width=width;
+	}
+	@Override
+	public double area() {
+		return height*width;
+	}
+}
+
+
+package task10;
+
+public class Main {
+	public static void main(String args[]) {
+		Circle circle=new Circle(5);
+		Rectangle rectangle=new Rectangle(4,6);
+		System.out.println("Circle Area : "+circle.area());
+		System.out.println("Rectangle Area : "+rectangle.area());
+	}
+
+}
